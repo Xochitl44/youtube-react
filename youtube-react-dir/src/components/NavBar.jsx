@@ -8,11 +8,11 @@ export default function NavBar () {
                 <span>YouTube</span>
             </div>
             <div className="flex items-center justify-center">
-                <input type='text' placeholder='
+                <input className="w-full pt-2 pr-4 border-solid border-2 border-neutral-900 bg-transparent rounded-full" type='text' placeholder='
                 Search' />                
             </div>
-            <div id="user-icon">
-                <img src="https://api.dicebear.com/8.x/notionists/svg?seed=Xochitl" alt='user' />
+            <div className="flex justify-end">
+                <img className='w-8 h-8 rounded' src="https://api.dicebear.com/8.x/notionists/svg?seed=Xochitl" alt='user' />
             </div>
         </nav>
     );

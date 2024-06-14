@@ -21,11 +21,11 @@ export default function Video(props) {
    // <article className={articleClassNames.join(" ")}>
 
     return (
-        <article className={clsx('video-card', { 'special': props.channel === 'Marques Brownlee',})}>
-            <img src={props.image} alt="" />
-                <footer>
+        <article className={clsx('flex flex-col gap-2', { 'special': props.channel === 'Marques Brownlee',})}>
+            <img className="w-full rounded-xl object-cover" src={props.image} alt="" />
+                <footer className="grid gap-2 grid-cols-[3rem_1fr]">
                     {props.channel && (
-                        <img src={`https://api.dicebear.com/8.x/notionists/svg?seed=${props.channel}`} alt="" />
+                        <img className="col-start-1 col-end-2 w-8 h-8 rounded" src={`https://api.dicebear.com/8.x/notionists/svg?seed=${props.channel}`} alt="" />
                     )}
                     {!props.channel && <span>😕</span>}
 
@@ -35,8 +35,8 @@ export default function Video(props) {
                         <span>😕</span>
                     )*/}
 
-                    <p className="video-card-title">{props.title}</p>
-                    <p className="video-card-channel">{props.channel || 'UNKNOWN'}</p>
+                    <p className="col-start 2 col-end-3">{props.title}</p>
+                    <p className="col-start 2 col-end-3">{props.channel || 'UNKNOWN'}</p>
                 </footer>
         </article>
     );

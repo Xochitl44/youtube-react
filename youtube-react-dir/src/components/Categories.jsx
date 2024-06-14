@@ -10,10 +10,10 @@ export default function Categories() {
     ];
 
     return (
-        <div id="categories-list">
+        <div className="flex flex-row gap-2">
               {categories.map((category) => {
                 return (
-                    <span key={`category-${category}`} className="category">
+                    <span key={`category-${category}`} className="pt-2 pr-4 rounded-lg bg-gray-500/[.06] text-white">
                         {category}
                     </span>
                 );
